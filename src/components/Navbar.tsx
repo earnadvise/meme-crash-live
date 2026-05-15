@@ -31,7 +31,7 @@ export default function Navbar({ username }: NavbarProps) {
         }}>
           <Gamepad2 size={24} />
         </div>
-        <span style={{ fontWeight: '700', fontSize: '1.2rem', tracking: '-0.02em' }}>Base Puzzle</span>
+        <span style={{ fontWeight: '700', fontSize: '1.2rem', letterSpacing: '-0.02em' }}>Base Puzzle</span>
       </div>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
