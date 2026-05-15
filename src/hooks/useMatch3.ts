@@ -62,10 +62,10 @@ export function useMatch3() {
       for (let c = 0; c < GRID_SIZE - 2; c++) {
         const type = currentGrid[r][c].type;
         if (type && currentGrid[r][c + 1].type === type && currentGrid[r][c + 2].type === type) {
-          matches.push({ r, c }, { r, c + 1 }, { r, c + 2 });
+          matches.push({ r: r, c: c }, { r: r, c: c + 1 }, { r: r, c: c + 2 });
           let nextC = c + 3;
           while (nextC < GRID_SIZE && currentGrid[r][nextC].type === type) {
-            matches.push({ r, c: nextC });
+            matches.push({ r: r, c: nextC });
             nextC++;
           }
         }
@@ -77,10 +77,10 @@ export function useMatch3() {
       for (let r = 0; r < GRID_SIZE - 2; r++) {
         const type = currentGrid[r][c].type;
         if (type && currentGrid[r + 1][c].type === type && currentGrid[r + 2][c].type === type) {
-          matches.push({ r, c }, { r + 1, c }, { r + 2, c });
+          matches.push({ r: r, c: c }, { r: r + 1, c: c }, { r: r + 2, c: c });
           let nextR = r + 3;
           while (nextR < GRID_SIZE && currentGrid[nextR][c].type === type) {
-            matches.push({ r: nextR, c });
+            matches.push({ r: nextR, c: c });
             nextR++;
           }
         }
